@@ -1,32 +1,11 @@
-<html>
-  <head>
-    <title>Isabelle's blog</title>
-  <head>
-  <body>
     <div>
       <h1><a href="/">Isabelle's Blog</a></h1>
     <div>
 
-    <div>
-      <p>published: 23.03.2019, 2:29</p>
-      <h2><a href="">My first post</a></h2>
-      <p>Lorem ipsum dolor sit amet, abhorreant instructior ei vix. Elitr utroque eu vis, sea cu audire vivendum. Vel enim imperdiet et, ne audiam ceteros consectetuer vel. An eum deseruisse temporibus theophrastus, vero aperiam eleifend mea an. Rebum delenit adversarium est cu, et pri vocent dissentiunt, eos integre copiosae an. Ex mutat quando necessitatibus his, consul eligendi maiestatis mea at. Verterem erroribus ea nam, eros fierent scribentur sed et, in atomorum pericula gloriatur sit. Duo labore abhorreant mediocritatem at, dicat persecuti complectitur ne has, error petentium mea ut. Sea et modo docendi referrentur, mel ex laoreet incorrupte. Mundi utinam volutpat at vis, vix vitae discere nusquam no, nibh possit ius te.
-
-      Cum amet voluptua te, in vide illud has. Usu id nominati comprehensam, mollis appellantur nam in. Menandri accusata an nec, pri idque omittam maiestatis in. Cu has nullam sapientem, ei mei nostro omittantur, eum mucius definitiones at.
-
-      Elitr laudem maiorum vim an, vis cu eius tempor iuvaret, ne vix eruditi omnesque pertinacia. Debitis salutatus vituperata in nam, suas vero inermis ex sed. Ne ius oblique detraxit dissentias, eam no amet nusquam. Ex augue laudem cum, soleat propriae eu pri. Sed cibo possim dignissim an. Vis cu tritani appetere sensibus, cum eu discere aliquam scribentur. Ad diceret assueverit scribentur eos, et mel autem iudico tritani.
-
-      Alterum saperet at eam, denique vulputate argumentum pro ea, his no erant dicant. Aeque singulis ut quo. Mel ea quas omnis imperdiet. Vix ei delenit mediocrem.</p>
-    </div>
-      <p>published: 23.03.2019, 2:34</p>
-      <h2><a href="">My second post</a></h2>
-      <p>Lorem ipsum dolor sit amet, abhorreant instructior ei vix. Elitr utroque eu vis, sea cu audire vivendum. Vel enim imperdiet et, ne audiam ceteros consectetuer vel. An eum deseruisse temporibus theophrastus, vero aperiam eleifend mea an. Rebum delenit adversarium est cu, et pri vocent dissentiunt, eos integre copiosae an. Ex mutat quando necessitatibus his, consul eligendi maiestatis mea at. Verterem erroribus ea nam, eros fierent scribentur sed et, in atomorum pericula gloriatur sit. Duo labore abhorreant mediocritatem at, dicat persecuti complectitur ne has, error petentium mea ut. Sea et modo docendi referrentur, mel ex laoreet incorrupte. Mundi utinam volutpat at vis, vix vitae discere nusquam no, nibh possit ius te.
-
-      Cum amet voluptua te, in vide illud has. Usu id nominati comprehensam, mollis appellantur nam in. Menandri accusata an nec, pri idque omittam maiestatis in. Cu has nullam sapientem, ei mei nostro omittantur, eum mucius definitiones at.
-
-      Elitr laudem maiorum vim an, vis cu eius tempor iuvaret, ne vix eruditi omnesque pertinacia. Debitis salutatus vituperata in nam, suas vero inermis ex sed. Ne ius oblique detraxit dissentias, eam no amet nusquam. Ex augue laudem cum, soleat propriae eu pri. Sed cibo possim dignissim an. Vis cu tritani appetere sensibus, cum eu discere aliquam scribentur. Ad diceret assueverit scribentur eos, et mel autem iudico tritani.
-
-      Alterum saperet at eam, denique vulputate argumentum pro ea, his no erant dicant. Aeque singulis ut quo. Mel ea quas omnis imperdiet. Vix ei delenit mediocrem.</p>
-    </div>
-  </body>
-</html>
+    {% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+    {% endfor %}
